@@ -20,24 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0889b3cb-1d7c-4245-8985-865c43eec28b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Ecommerce-design.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainsite/ecommerce/migrations/0003_product_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainsite/media/pic/mobile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainsite/templates/ecommerce/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainsite/ecommerce/registerview.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainsite/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainsite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mainsite/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainsite/ecommerce/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainsite/ecommerce/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainsite/ecommerce/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainsite/ecommerce/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainsite/mainsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainsite/mainsite/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainsite/mainsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainsite/mainsite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainsite/templates/ecom/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainsite/templates/ecommerce/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainsite/templates/ecom/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainsite/templates/ecommerce/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainsite/templates/ecom/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainsite/templates/ecommerce/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainsite/templates/ecom/product.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +53,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mainsite/templates/registration" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,6 +73,7 @@
       <workItem from="1607354982140" duration="2106000" />
       <workItem from="1607399311302" duration="20000" />
       <workItem from="1607399338131" duration="2035000" />
+      <workItem from="1607479601231" duration="3792000" />
     </task>
     <servers />
   </component>
