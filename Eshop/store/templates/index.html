@@ -15,11 +15,11 @@
           <div class="row mx-auto">
             {% for product in products %}
                  <div class="card mx-auto mb-3" style="width: 18rem;">
-                 <img src="https://i.picsum.photos/id/868/200/300.jpg?hmac=UbXGSABDJTIs8VH95oRuEIVyJquMN8rcqqC9NrTFuAU" class="card-img-top" alt="...">
+                 <img src="{{ product.image.url }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text"><b>{{ product.price}} </b></p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+                <p class="card-title">{{ product.name }}</p>
+                <p class="card-text"><b> $ {{ product.price}} </b></p>
+                <a href="#" class="btn btn-light btn-sm border">Add to Cart</a>
                 </div>
                 </div>
         {% endfor %}
