@@ -4,9 +4,18 @@
 
 
     <div class="container-fluid mt-3">
-          <div class="row mx-auto">
-            {% for product in products %}
-                 <div class="card mx-auto mb-3" style="width: 18rem;">
+        <div class="row">
+            <div class="col-lg-3 mx-auto">
+                <ul class="list-group">
+                    {% for category in categories %}
+                    <a href="#" class="list-group-item list-group-item-action ">{{ category.name }}</a>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="products" class="col-lg-9 mx-auto">
+                <div class="row mx-auto">
+                {% for product in products %}
+                 <div class="card mx-auto mb-3" style="width: 18rem; ">
                  <img src="{{ product.image.url }}" class="card-img-top" alt="...">
                 <div class="card-body">
                 <p class="card-title">{{ product.name }}</p>
@@ -14,9 +23,11 @@
                 <a href="#" class="btn btn-light btn-sm border">Add to Cart</a>
                 </div>
                 </div>
-        {% endfor %}
+            {% endfor %}
 
-          </div>
+             </div>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
