@@ -5,7 +5,6 @@ from .models.category import Category
 
 
 def index(request):
-
     products = None
     categories = Category.get_all_categories()
 
@@ -15,9 +14,12 @@ def index(request):
     else:
         products = Product.get_all_products()
 
-
-    data={}
+    data = {}
     data['products'] = products
     data['categories'] = categories
 
     return render(request, 'index.html', data)
+
+
+def signup(request):
+    return render(request, 'signup.html')
