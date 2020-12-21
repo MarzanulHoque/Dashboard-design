@@ -8,6 +8,11 @@
                 <h3 class="alert alert-light border rounded "> Create An Account</h3>
             <form action="/signup" method="POST">
                 {% csrf_token %}
+                {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+                {% endif %}
                 <div class="form-group">
                     <label for="">FirstName</label><br>
                     <input type="text" name="firstname" class="from-control " placeholder="firstname">
