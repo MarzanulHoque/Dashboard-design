@@ -28,23 +28,30 @@ def signup(request):
         return render(request, 'signup.html')
     else:
         postData = request.POST
-        firstname = postData.get('firstname')
-        lastname = postData.get('lastname')
+        first_name = postData.get('firstname')
+        last_name = postData.get('lastname')
         phone = postData.get('phone')
         email = postData.get('email')
         password = postData.get('password')
 
+        value = {
+            'first_name': first_name,
+            'last_name': last_name,
+            'phone': phone,
+            'email': email
+        }
+
         # validations
         error_message = None
-        if not firstname:
+        if not first_name:
             error_message = "First name required"
 
-        elif len(firstname) < 4:
+        elif len(first_name) < 4:
             error_message = "first name Must be 4 Character Long"
 
-        elif not lastname:
+        elif not last_name:
             error_message = "Last name Required"
-        elif len(lastname) < 4:
+        elif len(last_name) < 4:
             error_message = "last name must be 4 character"
         elif not phone:
             error_message = "Phone Number Required"
@@ -59,9 +66,13 @@ def signup(request):
 
         if not error_message:
 
-            customer = Customer(first_name=firstname, last_name=lastname, phone=phone, email=email, password=password)
+            customer = Customer(first_name=first_name, last_name=last_name, phone=phone, email=email, password=password)
 
             customer.register()
+            return render(request, 'index.html')
         else:
-
-            return render(request, 'signup.html', {'error': error_message})
+            data = {
+                'error': error_message,
+                'values': value
+            }
+            return render(request, 'signup.html', data)

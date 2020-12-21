@@ -15,23 +15,23 @@
                 {% endif %}
                 <div class="form-group">
                     <label for="">FirstName</label><br>
-                    <input type="text" name="firstname" class="from-control " placeholder="firstname">
+                    <input type="text" name="firstname" value="{{ values.first_name }}" class="from-control " placeholder="firstname">
                 </div>
 
                 <div class="form-group">
                     <label for="">LastName</label><br>
-                    <input type="text" name="lastname" class="from-control " placeholder="lastname">
+                    <input type="text" name="lastname" value="{{ values.last_name }}" class="from-control " placeholder="lastname">
                 </div>
 
                 <div class="form-group">
                     <label for="">Phone Number</label><br>
-                    <input type="text" name="phone" class="from-control " placeholder="+088">
+                    <input type="text" name="phone" value="{{ values.phone}}" class="from-control " placeholder="+088">
                 </div>
 
 
                 <div class="form-group">
                     <label for="">Email</label><br>
-                    <input type="email" name="email" class="from-control " placeholder="example@gmail.com">
+                    <input type="email" name="email" value="{{ values.email }}" class="from-control " placeholder="example@gmail.com">
                 </div>
                 <div class="form-group">
                     <label for="">Password</label><br>
