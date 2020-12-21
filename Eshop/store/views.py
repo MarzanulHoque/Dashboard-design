@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models.product import Product
 from .models.category import Category
+from .models.customer import Customer
 
 
 def index(request):
@@ -22,7 +23,19 @@ def index(request):
 
 
 def signup(request):
-    if request.method== 'GET' :
+    if request.method == 'GET':
 
         return render(request, 'signup.html')
     else:
+        postData = request.POST
+        firstname = postData.get('firstname')
+        lastname = postData.get('lastname')
+        phone = postData.get('phone')
+        email = postData.get('email')
+        password = postData.get('password')
+
+        customer = Customer(first_name=firstname, last_name=lastname, phone=phone, email=email, password=password)
+
+        customer.register()
+
+        return HttpResponse("<h1>Signup Success </h1>")
