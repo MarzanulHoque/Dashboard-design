@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models.product import Product
 from .models.category import Category
 from .models.customer import Customer
+from django.contrib.auth.hashers import make_password,check_password
 
 
 def index(request):
@@ -71,7 +72,7 @@ def signup(request):
             error_message = "Email Address Is Already Registered"
 
         if not error_message:
-
+            customer.password = make_password(customer.password)
             customer.register()
             return redirect("homepage")
         else:
