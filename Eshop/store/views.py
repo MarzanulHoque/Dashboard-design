@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models.product import Product
 from .models.category import Category
@@ -43,6 +43,9 @@ def signup(request):
 
         # validations
         error_message = None
+
+        customer = Customer(first_name=first_name, last_name=last_name, phone=phone, email=email, password=password)
+
         if not first_name:
             error_message = "First name required"
 
@@ -64,9 +67,10 @@ def signup(request):
         elif len(password) < 6:
             error_message = "password Must  be 6 Character Long"
 
-        if not error_message:
+        elif customer.isExists():
+            error_message = "Email Address Is Already Registered"
 
-            customer = Customer(first_name=first_name, last_name=last_name, phone=phone, email=email, password=password)
+        if not error_message:
 
             customer.register()
             return redirect("homepage")
