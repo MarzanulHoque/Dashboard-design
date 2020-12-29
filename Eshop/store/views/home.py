@@ -1,23 +1,29 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from django.views import View
 from store.models.product import Product
 from store.models.category import Category
 
 
+class Index(View):
 
-def index(request):
-    products = None
-    categories = Category.get_all_categories()
+    def post(self, request):
+        product = request.POST.get('product')
+        print(product)
+        return redirect("homepage")
 
-    categoryID = request.GET.get('category')
-    if categoryID:
-        products = Product.get_all_products_by_categoryid(categoryID)
-    else:
-        products = Product.get_all_products()
+    def get(self, request):
+        products = None
+        categories = Category.get_all_categories()
 
-    data = {}
-    data['products'] = products
-    data['categories'] = categories
+        categoryID = request.GET.get('category')
+        if categoryID:
+            products = Product.get_all_products_by_categoryid(categoryID)
+        else:
+            products = Product.get_all_products()
 
-    return render(request, 'index.html', data)
+        data = {}
+        data['products'] = products
+        data['categories'] = categories
+        print('you are : ', request.session.get('email'))
 
+        return render(request, 'index.html', data)
