@@ -4,6 +4,7 @@ from .models.product import Product
 from .models.category import Category
 from .models.customer import Customer
 from django.contrib.auth.hashers import make_password, check_password
+from django.views import View
 
 
 def index(request):
@@ -94,11 +95,12 @@ def signup(request):
         return registerUser(request)
 
 
-def login(request):
-    if request.method == "GET":
+class Login(View):
+    def get(self, request):
+
         return render(request, 'login.html')
 
-    else:
+    def post(self, request):
         email = request.POST.get('email')
         password = request.POST.get('password')
 
