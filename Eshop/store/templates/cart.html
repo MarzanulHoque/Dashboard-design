@@ -61,7 +61,7 @@
       </div>
       <div class="modal-body">
             <div class="m-2 p-3">
-                <form action="/checkout" method="POST">
+                <form action="/check-out" method="POST">
                     {% csrf_token %}
                    <div class="form-group">
                        <label for="Address"  >Address</label>
@@ -70,7 +70,7 @@
                    </div>
 
                      <div class="form-group">
-                         <label for="Address"  >Phone</label>
+                         <label for="phone"  >Phone</label>
                          <input type="text" name="phone" placeholder="" class="form-control"
                                   aria-describedby="helpId">
                      </div>
