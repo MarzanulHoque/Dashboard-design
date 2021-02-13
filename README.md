@@ -1,2 +1,2 @@
-Dashboard Design
+Ecommerce design with django
 
